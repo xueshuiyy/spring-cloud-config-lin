@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8888/
+      profile: prd
+      label: master
+  application:
+    name: config-client

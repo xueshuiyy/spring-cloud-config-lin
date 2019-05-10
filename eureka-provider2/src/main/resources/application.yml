@@ -1,0 +1,22 @@
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: eureka-provider2
+  client:
+    service-url:
+      defaultZone: http://www.lin.com:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"   #开启所有的端点
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    virtual-host: linRabbit
+    username: guest
+    password: guest
+    connection-timeout: 10000
+    template:
+      mandatory: true

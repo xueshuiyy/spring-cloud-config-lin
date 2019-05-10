@@ -8,11 +8,11 @@
         <version>0.0.1-SNAPSHOT</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-	<groupId>lin.springcloud</groupId>
-	<artifactId>config-client</artifactId>
+	<groupId>com.eureka</groupId>
+	<artifactId>provider2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>config-client</name>
-	<description>这只是用来做一个demo，真正的应用放到了eureka-provider中</description>
+	<name>provider2</name>
+	<description>provider实例2</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -20,8 +20,8 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 
 		<dependency>
@@ -34,6 +34,16 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
 	</dependencies>
 
 	<build>
