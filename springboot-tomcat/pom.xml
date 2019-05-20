@@ -2,16 +2,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.4.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.5.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+    <packaging>war</packaging>
 	<groupId>com.eureka</groupId>
-	<artifactId>server</artifactId>
+	<artifactId>server-tomcat</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>eureka-server</name>
+	<name>server-tomcat</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -30,6 +31,14 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
 	</dependencies>
 
 	<dependencyManagement>
@@ -45,7 +54,6 @@
 	</dependencyManagement>
 
 	<build>
-        <finalName>ms-eureka-server</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
